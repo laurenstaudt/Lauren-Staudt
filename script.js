@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-    // Keep the same centered site identity on every page.
+    // Apply the same centered site identity to every page.
     const headerInfo = document.querySelector(".header-info");
 
     if (headerInfo) {
