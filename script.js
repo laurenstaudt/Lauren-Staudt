@@ -88,22 +88,30 @@ document.addEventListener("DOMContentLoaded", function () {
             z-index: 1;
         }
 
-        /* Replace the page-title box with a dark blue accent line. */
+        /* Replace the page-title box with a centered title and dark blue accent line. */
         .hero {
             min-height: 0;
-            padding: 0 0 12px;
+            padding: 28px 0 12px;
+            margin-bottom: 30px;
             background: transparent;
             border: none;
             border-bottom: 3px solid #1d3557;
             display: block;
-            margin-bottom: 30px;
             color: #1d3557;
+            text-align: center;
         }
 
         .hero h2 {
             font-size: 28px;
             margin: 0;
             color: #1d3557;
+        }
+
+        /* Add an extra row of space below the accent line. */
+        .hero::after {
+            content: "";
+            display: block;
+            height: 28px;
         }
 
         @media (max-width: 900px) {
