@@ -88,6 +88,24 @@ document.addEventListener("DOMContentLoaded", function () {
             z-index: 1;
         }
 
+        /* Replace the page-title box with a dark blue accent line. */
+        .hero {
+            min-height: 0;
+            padding: 0 0 12px;
+            background: transparent;
+            border: none;
+            border-bottom: 3px solid #1d3557;
+            display: block;
+            margin-bottom: 30px;
+            color: #1d3557;
+        }
+
+        .hero h2 {
+            font-size: 28px;
+            margin: 0;
+            color: #1d3557;
+        }
+
         @media (max-width: 900px) {
             header {
                 position: relative;
