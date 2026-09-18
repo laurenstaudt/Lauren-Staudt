@@ -41,4 +41,66 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
+    // Keep the same centered site identity on every page.
+    const headerInfo = document.querySelector(".header-info");
+
+    if (headerInfo) {
+        headerInfo.innerHTML = `
+            <h1>Marketing and Entrepreneurship student</h1>
+            <p>at Iowa State University</p>
+        `;
+    }
+
+    const sharedHeaderStyles = document.createElement("style");
+    sharedHeaderStyles.textContent = `
+        header {
+            position: relative;
+        }
+
+        .header-info {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            padding: 25px 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            pointer-events: none;
+        }
+
+        .header-info h1 {
+            font-size: 21px;
+            color: #1d3557;
+            margin-bottom: 3px;
+        }
+
+        .header-info p {
+            color: #4d6989;
+            font-size: 17px;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+        }
+
+        .logo {
+            position: relative;
+            z-index: 1;
+        }
+
+        @media (max-width: 900px) {
+            header {
+                position: relative;
+            }
+
+            .header-info {
+                position: relative;
+                inset: auto;
+                width: 100%;
+                padding: 10px 20px 25px;
+            }
+        }
+    `;
+    document.head.appendChild(sharedHeaderStyles);
+
 });
